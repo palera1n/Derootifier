@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0172643C2CFB5B9600A7F38D /* PatcherMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0172643B2CFB5B8D00A7F38D /* PatcherMain.swift */; };
+		0172643E2CFB5CB900A7F38D /* patcher.c in Sources */ = {isa = PBXBuildFile; fileRef = 0172643D2CFB5CB400A7F38D /* patcher.c */; };
 		6DCF8E3429EA9E6F00D55A37 /* DerootifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCF8E3329EA9E6F00D55A37 /* DerootifierApp.swift */; };
 		6DCF8E3629EA9E6F00D55A37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCF8E3529EA9E6F00D55A37 /* ContentView.swift */; };
 		6DCF8E3829EA9E7100D55A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DCF8E3729EA9E7100D55A37 /* Assets.xcassets */; };
@@ -23,7 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6DCF8E3029EA9E6F00D55A37 /* Derootifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Derootifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0172643B2CFB5B8D00A7F38D /* PatcherMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatcherMain.swift; sourceTree = "<group>"; };
+		0172643D2CFB5CB400A7F38D /* patcher.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = patcher.c; sourceTree = "<group>"; };
+		0172643F2CFB5CE400A7F38D /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		6DCF8E3029EA9E6F00D55A37 /* Rootifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rootifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DCF8E3329EA9E6F00D55A37 /* DerootifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerootifierApp.swift; sourceTree = "<group>"; };
 		6DCF8E3529EA9E6F00D55A37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6DCF8E3729EA9E7100D55A37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,7 +66,7 @@
 		6DCF8E3129EA9E6F00D55A37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DCF8E3029EA9E6F00D55A37 /* Derootifier.app */,
+				6DCF8E3029EA9E6F00D55A37 /* Rootifier.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +106,9 @@
 		6DE2082529EB2E7B0053E93D /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				0172643F2CFB5CE400A7F38D /* bridge.h */,
+				0172643D2CFB5CB400A7F38D /* patcher.c */,
+				0172643B2CFB5B8D00A7F38D /* PatcherMain.swift */,
 				6DE2082629EB2E940053E93D /* ShellScript.swift */,
 			);
 			path = Support;
@@ -119,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DCF8E2F29EA9E6F00D55A37 /* Derootifier */ = {
+		6DCF8E2F29EA9E6F00D55A37 /* Rootifier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DCF8E3E29EA9E7100D55A37 /* Build configuration list for PBXNativeTarget "Derootifier" */;
+			buildConfigurationList = 6DCF8E3E29EA9E7100D55A37 /* Build configuration list for PBXNativeTarget "Rootifier" */;
 			buildPhases = (
 				6DCF8E2C29EA9E6F00D55A37 /* Sources */,
 				6DCF8E2D29EA9E6F00D55A37 /* Frameworks */,
@@ -131,13 +139,13 @@
 			);
 			dependencies = (
 			);
-			name = Derootifier;
+			name = Rootifier;
 			packageProductDependencies = (
 				6DCF8E4229EA9E8A00D55A37 /* AuxiliaryExecute */,
 				6DE2089829F5B80A0053E93D /* FluidGradient */,
 			);
 			productName = Derootifier;
-			productReference = 6DCF8E3029EA9E6F00D55A37 /* Derootifier.app */;
+			productReference = 6DCF8E3029EA9E6F00D55A37 /* Rootifier.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -155,7 +163,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6DCF8E2B29EA9E6F00D55A37 /* Build configuration list for PBXProject "Derootifier" */;
+			buildConfigurationList = 6DCF8E2B29EA9E6F00D55A37 /* Build configuration list for PBXProject "Rootifier" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -172,7 +180,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DCF8E2F29EA9E6F00D55A37 /* Derootifier */,
+				6DCF8E2F29EA9E6F00D55A37 /* Rootifier */,
 			);
 		};
 /* End PBXProject section */
@@ -198,11 +206,13 @@
 				6DCF8E3629EA9E6F00D55A37 /* ContentView.swift in Sources */,
 				6DE2082C29EB3E990053E93D /* TintedButton.swift in Sources */,
 				6DE2082729EB2E940053E93D /* ShellScript.swift in Sources */,
+				0172643C2CFB5B9600A7F38D /* PatcherMain.swift in Sources */,
 				6DE2083229EB46850053E93D /* DocumentPicker.swift in Sources */,
 				6DCF8E4829EAB03000D55A37 /* Alert++.swift in Sources */,
 				6DE2088C29F591160053E93D /* CreditsView.swift in Sources */,
 				6DE2082E29EB3F230053E93D /* MaterialView.swift in Sources */,
 				6DCF8E3429EA9E6F00D55A37 /* DerootifierApp.swift in Sources */,
+				0172643E2CFB5CB900A7F38D /* patcher.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Derootifier/Preview Content\"";
-				DEVELOPMENT_TEAM = A999YUQPG2;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -346,12 +356,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.3;
-				PRODUCT_BUNDLE_IDENTIFIER = org.haxi0.Derootifier;
+				PRODUCT_BUNDLE_IDENTIFIER = in.palera.Rootifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Derootifier/Support/bridge.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,7 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Derootifier/Preview Content\"";
-				DEVELOPMENT_TEAM = A999YUQPG2;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -380,12 +391,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.3;
-				PRODUCT_BUNDLE_IDENTIFIER = org.haxi0.Derootifier;
+				PRODUCT_BUNDLE_IDENTIFIER = in.palera.Rootifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Derootifier/Support/bridge.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,7 +406,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6DCF8E2B29EA9E6F00D55A37 /* Build configuration list for PBXProject "Derootifier" */ = {
+		6DCF8E2B29EA9E6F00D55A37 /* Build configuration list for PBXProject "Rootifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DCF8E3C29EA9E7100D55A37 /* Debug */,
@@ -403,7 +415,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DCF8E3E29EA9E7100D55A37 /* Build configuration list for PBXNativeTarget "Derootifier" */ = {
+		6DCF8E3E29EA9E7100D55A37 /* Build configuration list for PBXNativeTarget "Rootifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DCF8E3F29EA9E7100D55A37 /* Debug */,

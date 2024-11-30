@@ -1,0 +1,24 @@
+{
+  "originHash" : "f2970e2a38fe408e55cb51d07fc03f3c840f9a8a9a3e01149002e610fb943a5a",
+  "pins" : [
+    {
+      "identity" : "auxiliaryexecute",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lakr233/AuxiliaryExecute",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7fb043c2d18ef947c23537f43be26f92e837d1af"
+      }
+    },
+    {
+      "identity" : "fluidgradient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Cindori/FluidGradient",
+      "state" : {
+        "revision" : "9ddda4cf23671ef0228e88681ec6210cb3e0d7f7",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

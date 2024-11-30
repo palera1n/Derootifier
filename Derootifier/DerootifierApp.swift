@@ -8,6 +8,16 @@
 import SwiftUI
 
 @main
+struct DerootifierBinary {
+    static func main() {
+        if CommandLine.arguments.count >= 2 {
+            exit(PatcherMain())
+        } else {
+            DerootifierApp.main()
+        }
+    }
+}
+
 struct DerootifierApp: App {
     var body: some Scene {
         WindowGroup {

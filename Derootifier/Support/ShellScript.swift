@@ -11,7 +11,7 @@ import UIKit
 func repackDeb(scriptPath: String, debURL: URL) -> String {
     var output = ""
     let command = "/var/jb/usr/bin/dash"
-    let env = ["PATH": "/var/jb/usr/bin:$PATH"]
+    let env = ["PATH": "/var/jb/usr/bin:$PATH", "HELPER_PATH": Bundle.main.executablePath!]
     let args = [scriptPath, debURL.path]
 
     let receipt = AuxiliaryExecute.spawn(command: command, args: args, environment: env, output: { output += $0 })
@@ -25,10 +25,10 @@ func repackDeb(scriptPath: String, debURL: URL) -> String {
 
 func folderCheck() {
     do {
-        if FileManager.default.fileExists(atPath: "/var/mobile/.Derootifier") {
+        if FileManager.default.fileExists(atPath: "/var/mobile/.Rootifier") {
             print("We're good! :)")
         } else {
-            try FileManager.default.createDirectory(atPath: "/var/mobile/.Derootifier", withIntermediateDirectories: true)
+            try FileManager.default.createDirectory(atPath: "/var/mobile/.Rootifier", withIntermediateDirectories: true)
         }
     } catch {
         UIApplication.shared.alert(title: "Error!", body: "There was a problem with making the folder for the deb. Maybe you are using palera1n which doesn't have /var/jb folder.", withButton: false)
@@ -37,10 +37,10 @@ func folderCheck() {
 
 func checkFileMngrs() {
     if UIApplication.shared.canOpenURL(URL(string: "filza://")!) {
-        UIApplication.shared.open(URL(string: "filza:///var/mobile/.Derootifier")!)
+        UIApplication.shared.open(URL(string: "filza:///var/mobile/.Rootifier")!)
     } else {
         if UIApplication.shared.canOpenURL(URL(string: "santander://")!) {
-            UIApplication.shared.open(URL(string: "santander:///var/mobile/.Derootifier")!)
+            UIApplication.shared.open(URL(string: "santander:///var/mobile/.Rootifier")!)
         } else {
             UIApplication.shared.alert(title: "Aw... :(", body: "We didn't find any file managers which we can use to open the directory with the converted .deb file!", withButton: true)
         }
